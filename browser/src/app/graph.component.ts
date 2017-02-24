@@ -88,9 +88,8 @@ export class GraphComponent implements OnChanges, AfterViewInit {
     if (changes['showStocks'] && changes['showStocks'].previousValue != changes['showStocks'].currentValue) {
       // trigger when stock visibility is changed
       this.calcProps();
-    }
-
-    if (changes['stocks'] && changes['stocks'].previousValue != changes['stocks'].currentValue) {
+      this.resetCanvas();
+    }else if (changes['stocks'] && changes['stocks'].previousValue != changes['stocks'].currentValue) {
       // stocks.length changed - reset canvas
       this.resetCanvas();
     } else {
@@ -357,6 +356,9 @@ export class GraphComponent implements OnChanges, AfterViewInit {
 
     if (showHovering) {
       this.stocks.forEach((stock, i) => {
+        if(!stock.isVisible){
+          return;
+        }
         const y = stock.data[this.hoveringDate][STOCK_CLOSE];
         const posY = this.graph.y(y);
         cursor1.append('circle') // crosspoints
@@ -376,6 +378,9 @@ export class GraphComponent implements OnChanges, AfterViewInit {
       });
     } else if (showSelected) {
       this.stocks.forEach((stock, i) => {
+        if(!stock.isVisible){
+          return;
+        }
         const y = stock.data[this.selectedDate][STOCK_CLOSE];
         const posY = this.graph.y(y);
         cursor2.append('circle') // crosspoints

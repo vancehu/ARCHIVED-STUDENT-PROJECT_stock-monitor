@@ -325,8 +325,9 @@ var GraphComponent = (function () {
         if (changes['showStocks'] && changes['showStocks'].previousValue != changes['showStocks'].currentValue) {
             // trigger when stock visibility is changed
             this.calcProps();
+            this.resetCanvas();
         }
-        if (changes['stocks'] && changes['stocks'].previousValue != changes['stocks'].currentValue) {
+        else if (changes['stocks'] && changes['stocks'].previousValue != changes['stocks'].currentValue) {
             // stocks.length changed - reset canvas
             this.resetCanvas();
         }
@@ -569,6 +570,9 @@ var GraphComponent = (function () {
         labelPosX = (labelPosX < this.graph.width / 2) ? labelPosX + 5 : labelPosX - 60;
         if (showHovering) {
             this.stocks.forEach(function (stock, i) {
+                if (!stock.isVisible) {
+                    return;
+                }
                 var y = stock.data[_this.hoveringDate][__WEBPACK_IMPORTED_MODULE_1__stock__["c" /* STOCK_CLOSE */]];
                 var posY = _this.graph.y(y);
                 cursor1.append('circle') // crosspoints
@@ -589,6 +593,9 @@ var GraphComponent = (function () {
         }
         else if (showSelected) {
             this.stocks.forEach(function (stock, i) {
+                if (!stock.isVisible) {
+                    return;
+                }
                 var y = stock.data[_this.selectedDate][__WEBPACK_IMPORTED_MODULE_1__stock__["c" /* STOCK_CLOSE */]];
                 var posY = _this.graph.y(y);
                 cursor2.append('circle') // crosspoints
