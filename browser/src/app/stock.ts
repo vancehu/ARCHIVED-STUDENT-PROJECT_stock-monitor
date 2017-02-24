@@ -1,8 +1,7 @@
 export class Stock {
     symbol: string;
-    isVisible: boolean;
     //Date,Open,High,Low,Close,Volume,Adj Close
-    data: any[]
+    data: any[];
 }
 // color sequence for stocks
 export const COLOR_SEQ=['red','green','blue','cyan'];

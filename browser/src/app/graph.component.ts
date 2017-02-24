@@ -356,7 +356,7 @@ export class GraphComponent implements OnChanges, AfterViewInit {
 
     if (showHovering) {
       this.stocks.forEach((stock, i) => {
-        if(!stock.isVisible){
+        if(!this.showStocks[i]){
           return;
         }
         const y = stock.data[this.hoveringDate][STOCK_CLOSE];
@@ -378,7 +378,7 @@ export class GraphComponent implements OnChanges, AfterViewInit {
       });
     } else if (showSelected) {
       this.stocks.forEach((stock, i) => {
-        if(!stock.isVisible){
+        if(!this.showStocks[i]){
           return;
         }
         const y = stock.data[this.selectedDate][STOCK_CLOSE];
