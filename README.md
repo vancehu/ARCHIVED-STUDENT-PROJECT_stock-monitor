@@ -82,7 +82,8 @@ server/
 ```
 
 ## 4. Experience acquired
-    - Become familiar with Angular 2 and Typescript.
-    - Data visualization: D3.js, SVG manipulation.
-    - Learned RxJS and Observable but not confident yet to use them. I used traditional Callback, Promise and Array manipulation, which is definitely more verbose.
-    - Not sure if I used best practices and conventions, which I need further guidance.
+
+- Become familiar with Angular 2 and Typescript.
+- Data visualization: D3.js, SVG manipulation.
+- Learned RxJS and Observable but not confident yet to use them. I used traditional Callback, Promise and Array manipulation, which is definitely more verbose.
+- Not sure if I used best practices and conventions, which I need further guidance.

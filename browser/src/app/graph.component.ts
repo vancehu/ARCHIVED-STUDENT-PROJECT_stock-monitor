@@ -145,12 +145,11 @@ export class GraphComponent implements OnChanges, AfterViewInit {
     // remove existing svg element
     this.graph.container.selectAll('svg').remove();
     this.graph.width = this.element.nativeElement.clientWidth - MARGIN * 2;
-    if (this.graph.width > 1000) {
-      this.graph.width = 1000;
-    }
-    // 4:3 ratio, or maximum width 1000px height 750px
+    // 4:3 ratio, or maximum height 800px
     this.graph.height = this.graph.width * 0.75 - MARGIN * 2;
-
+    if (this.graph.height > 800) {
+      this.graph.height = 800;
+    }
     // event listener for zoom/pan events
     // will replace adjX scale with current zooming setting
     this.graph.zoom = d3.zoom()
