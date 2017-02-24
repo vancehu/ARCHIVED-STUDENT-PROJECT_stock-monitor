@@ -1,0 +1,6 @@
+<div class="graph" #graph (window:resize)="onResize($event)">
+    <div class="overlay">
+        <span class="btn" (click)="zoom(true)">+</span>
+        <span class="btn" (click)="zoom(false)">-</span>
+        <span class="tip">or use mousewheel to zoom; drag horizontally to pan when zoomed</span>
+</div>

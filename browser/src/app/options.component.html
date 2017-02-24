@@ -1,0 +1,22 @@
+<div>
+  <p class="title">Options</p>
+  <div class="content">
+    <!--toggle SMA visibility when clicked-->
+    <div class="row" (click)="toggleSMA()">
+      <span class="checkbox" [class.checked]="showSMA">
+        <div class="checkmark" [hidden]="!showSMA"></div>
+      </span>
+      <span class="label">Show moving average</span>
+    </div>
+    <!--select SMA period-->
+    <div class="row">
+      <span class="label">SMA Period:</span>
+      <select [(ngModel)]="SMAPeriod" (ngModelChange)="changeSMAPeriod($event)">
+        <option [ngValue]="5">5 days</option>
+        <option [ngValue]="10">10 days</option>
+        <option [ngValue]="20">20 days</option>
+        <option [ngValue]="50">50 days</option>
+      </select>
+    </div>
+  </div>
+</div>

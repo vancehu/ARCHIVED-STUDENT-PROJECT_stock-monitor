@@ -1,0 +1,10 @@
+.content{
+    padding: 0 10px 10px 10px;
+}
+.color-block{
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+    height: 1em;
+    vertical-align: middle;
+}

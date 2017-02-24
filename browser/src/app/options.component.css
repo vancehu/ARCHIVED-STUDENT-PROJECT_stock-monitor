@@ -1,0 +1,26 @@
+.row {
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+.checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+}
+.checkbox.checked {
+    border-color: limegreen;
+}
+.checkmark {
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+    background-color: limegreen;
+}
+.label {
+    vertical-align: middle
+}

@@ -1,0 +1,13 @@
+<div *ngIf="stocks">
+  <p class="title">Legend</p>
+  <ul>
+    <!--click will change selected to current list item-->
+    <li *ngFor="let stock of stocks; let i = index" [class.selected]="selectedIndex===i" (click)="changeSelected(i)">
+      <!--click the checkbox will toggle visibility of a stock-->
+      <span class="checkbox" [style.borderColor]="showStocks[i]?colorSeq[i]:'darkgrey'" (click)="toggleStock(i, $event)">
+        <div class="checkmark" [hidden]="!showStocks[i]"  [style.backgroundColor]='colorSeq[i]' ></div>
+      </span>
+      <span class="label" [style.color]="showStocks[i]?'black':'darkgrey'">{{stock.symbol}}</span>
+    </li>
+  </ul>
+</div>

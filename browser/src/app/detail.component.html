@@ -1,0 +1,17 @@
+<div>
+  <p class="title">Stock Detail</p>
+  <div class="content">
+    <p *ngIf="selectedIndex < 0">No stock picked. Click the stock in the legend to pick one.</p>
+    <p *ngIf="selectedDate < 0">No specific date picked. Click the graph to pick a date.</p>
+    <div *ngIf="selectedDate >= 0 && selectedIndex >= 0">
+      <p><span class="color-block" [style.backgroundColor]="colorSeq[selectedIndex]"></span> Symbol: {{stocks[selectedIndex].symbol}}</p>
+      <p>Date: {{stocks[selectedIndex].data[selectedDate][0]}}</p>
+      <p>Open: {{stocks[selectedIndex].data[selectedDate][1]}}</p>
+      <p>High: {{stocks[selectedIndex].data[selectedDate][2]}}</p>
+      <p>Low: {{stocks[selectedIndex].data[selectedDate][3]}}</p>
+      <p>Close: {{stocks[selectedIndex].data[selectedDate][4]}}</p>
+      <p>Adj. Close: {{stocks[selectedIndex].data[selectedDate][6]}}</p>
+      <p>Volume: {{stocks[selectedIndex].data[selectedDate][5]}}</p>
+    </div>
+  </div>
+</div>

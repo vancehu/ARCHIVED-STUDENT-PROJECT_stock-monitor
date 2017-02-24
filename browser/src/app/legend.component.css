@@ -1,0 +1,40 @@
+/* list view*/
+ul{
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+li{
+    cursor: pointer;
+    padding: 1em;
+    line-height: 2em;
+    border-top: 1px solid whitesmoke;
+}
+li:hover{
+    background-color: whitesmoke;
+}
+li.selected{
+    background-color: lightblue;
+}
+
+/* colored check box */
+.checkbox{
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin-right: 1em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+}
+.checkmark{
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+}
+.label{
+    vertical-align: middle
+}

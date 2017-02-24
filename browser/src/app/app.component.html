@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="main">
+    <div class="graph">
+      <graph [stocks]="stocks" [(showStocks)]="showStocks" [(selectedIndex)]="selectedIndex" [(selectedDate)]="selectedDate" [showSMA]="showSMA" [SMAPeriod]="SMAPeriod"></graph>
+    </div>
+  </div>
+  <div class="side">
+    <div class="detail">
+      <detail [selectedIndex]="selectedIndex" [stocks]="stocks" [selectedDate]="selectedDate"></detail>
+    </div>
+    <div class="legend">
+      <stock-legend [stocks]="stocks" [(showStocks)]="showStocks" [(selectedIndex)]="selectedIndex"></stock-legend>
+    </div>
+    <div class="options">
+      <options [(showSMA)]="showSMA" [(SMAPeriod)]="SMAPeriod"></options>
+    </div>
+  </div>
+</div>
