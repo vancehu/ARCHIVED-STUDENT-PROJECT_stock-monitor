@@ -570,7 +570,7 @@ var GraphComponent = (function () {
         labelPosX = (labelPosX < this.graph.width / 2) ? labelPosX + 5 : labelPosX - 60;
         if (showHovering) {
             this.stocks.forEach(function (stock, i) {
-                if (!stock.isVisible) {
+                if (!_this.showStocks[i]) {
                     return;
                 }
                 var y = stock.data[_this.hoveringDate][__WEBPACK_IMPORTED_MODULE_1__stock__["c" /* STOCK_CLOSE */]];
@@ -593,7 +593,7 @@ var GraphComponent = (function () {
         }
         else if (showSelected) {
             this.stocks.forEach(function (stock, i) {
-                if (!stock.isVisible) {
+                if (!_this.showStocks[i]) {
                     return;
                 }
                 var y = stock.data[_this.selectedDate][__WEBPACK_IMPORTED_MODULE_1__stock__["c" /* STOCK_CLOSE */]];
