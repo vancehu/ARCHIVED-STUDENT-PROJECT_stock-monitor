@@ -6,6 +6,16 @@ The project contains a web API using Node.js(Express), and an application using 
 
 Live Demo is available: http://vancehu.info:3002
 
+### 1.1 Known Issue:
+Currently the zoom scale controlled by buttons will not keep if mouse zoom event occurs afterwards.
+This is a known bug of D3.js v4 and wasn't identified by me until late development.
+
+http://stackoverflow.com/questions/40246196/d3-v4-zoom-with-buttons-in-conflicts-with-zoom-behaviour
+
+The solution in this link is to use SVG transform instead of default zooming. However this project repaints dynamically instead of simple transform so the issue can't be resolved in this way.
+
+
+
 ## 2. Installation
 
 To run instantly:
