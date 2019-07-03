@@ -1,10 +1,9 @@
-# kWantera Sample Task Solution
+# Angular 2 / D3 Stock Price Graph
 
 ## 1. Introduction
 
-The project contains a web API using Node.js(Express), and an application using Angular 2 and D3.js. The server loads csv files from a designated folder and keeps the data in memory, and it sends JSON response on request. The client requests and gets the data from the server and generates a historical prices graph. User can zoom, pan and use filter/options to change the content of the graph. By hovering or click on the graph, user can check closing prices of all the stocks on the cursors or the detail of one stock on the side panel. Simple Moving Average curve is also available. The project is a solution to https://github.com/kwantera/sample-problem and implements all the requirements.
+The project contains a web API using Node.js(Express), and an application using Angular 2 and D3.js. The server loads csv files from a designated folder and keeps the data in memory, and it sends JSON response on request. The client requests and gets the data from the server and generates a historical prices graph. User can zoom, pan and use filter/options to change the content of the graph. By hovering or click on the graph, user can check closing prices of all the stocks on the cursors or the detail of one stock on the side panel. Simple Moving Average curve is also available. 
 
-Live Demo is available: http://vancehu.info:3002
 
 ### 1.1 Known Issue:
 Currently the zoom scale controlled by buttons will not keep if mouse zoom event occurs afterwards.
@@ -40,7 +39,7 @@ ng serve
 - Open 'browser/src/app/api.service.ts' and change the server address on line 9 if needed.
 
 ## 3. Structure
-![Image](https://raw.githubusercontent.com/vancehu/kwantera-sample-solution/master/readme.png)
+![Image](https://raw.githubusercontent.com/vancehu/ARCHIVED-STUDENT-PROJECT_stock-price-graph/master/readme.png)
 ```
 browser/
  src/
@@ -90,10 +89,3 @@ server/
 
   server.js           Implements Basic Express Server
 ```
-
-## 4. Experience acquired
-
-- Become familiar with Angular 2 and Typescript.
-- Data visualization: D3.js, SVG manipulation.
-- Learned RxJS and Observable but not confident yet to use them. I used traditional Callback, Promise and Array manipulation, which is definitely more verbose.
-- Not sure if I used best practices and conventions, which I need further guidance.
